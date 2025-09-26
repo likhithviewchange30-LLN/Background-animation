@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+}
+#bg{
+    position: relative;
+    background: linear-gradient( rgb(241, 241, 98), rgb(108, 243, 108));
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+#bg h1{
+    position: absolute;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+#bg ul li{
+    position: absolute;
+    list-style: none;
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(243, 239, 239);
+}
+
+#square li{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: square 6s infinite;
+}
+#square li:nth-child(2){
+    top: 20vh;
+    left: 20vh;
+    animation-delay: 3s;
+}
+#square li:nth-child(3){
+    top: 20vh;
+    left: 80%;
+     animation-delay: 5s;
+}
+#square li:nth-child(4){
+    top: 80%;
+    left: 40vh;
+     animation-delay: 2s;
+}
+#square li:nth-child(5){
+    top: 80%;
+    left: 90%;
+    animation-delay: 1s;
+}
+#square li:nth-child(6){
+    top: 80%;
+    left: 60%;
+     animation-delay: 4s;
+}
+@keyframes square{
+    0%{
+        transform: scale(0) rotateY(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(5) rotateY(1000deg);
+        opacity: 0;
+    }
+}
+#circle li{
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+    animation: circle 6s infinite;
+}
+#circle li:nth-child(2){
+    left: 30%;
+    animation-delay: 1s;
+}
+#circle li:nth-child(3){
+    left: 60%;
+    animation-delay: 4s;
+}
+#circle li:nth-child(4){
+    left: 70%;
+    animation-delay: 6s;
+}
+#circle li:nth-child(5){
+    left: 40%;
+    animation-delay: 5s;
+}
+#circle li:nth-child(6){
+    left: 95%;
+    animation-delay: 2s;
+}
+@keyframes circle{
+    0%{
+        transform: scale(0) rotate(0deg);
+        bottom: 0;
+        opacity: 1;
+    }
+     100%{
+        transform: scale(5) rotate(1000deg);
+        bottom: 90vh;
+        opacity: 0;
+
+    }
+}
